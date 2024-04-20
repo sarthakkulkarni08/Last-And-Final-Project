@@ -106,7 +106,7 @@ gsap.registerPlugin(ScrollTrigger);
       trigger: ".ai-features-row",
       start:"top center",
      toggleActions:"restart pause resume pause",
-     scrub:1 ,
+   
     
       
     }
