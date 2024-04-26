@@ -1,3 +1,17 @@
+function refreshPageNot(){
+  document.addEventListener("DOMContentLoaded", function() {
+  let myButton = document.querySelector(".nav-1 ul");
+  
+    myButton.addEventListener("click", function(event) {
+      event.preventDefault(); 
+      console.log("clicked")
+    });
+  });
+  
+  }
+refreshPageNot()
+
+// Above Function is for Prevent the Page Reload 
 
 function GSAPeffects(){
  gsap.registerPlugin(ScrollTrigger);
@@ -122,163 +136,29 @@ function GSAPeffects(){
     }
   })
 
+  gsap.from("#page7",{
+    y:250,
+    duration:1,
+    opacity:0,
+
+    scrollTrigger: {
+      trigger: "#page7",
+      start:"top center",
+  
+    
+   
+   
+    
+      
+    }
+  })
+
+
+
 }
 GSAPeffects()
 
-
-
-function shopdropDown(){
-  let navElem = document.querySelector("#shop");
-  let DropList = document.querySelector(".shop-content");
-  let eraHead = document.querySelector("#samsung-era-head");
-  let SamsungInfo = document.querySelector(".content");
-  navElem.addEventListener("mouseenter", function(){
-    DropList.style.display = "block";
-       DropList.style.marginLeft = "2vw"
-    eraHead.style.display = "none";
-    SamsungInfo.style.display = "none";
-  
-  })
-  DropList.addEventListener("mouseenter", function(){
-    DropList.style.display = "block";
-    eraHead.style.display = "none";
-    SamsungInfo.style.display = "none";
-  })
-  navElem.addEventListener("mouseleave", function(){
-    DropList.style.display = "none";
-    eraHead.style.display = "block";
-    SamsungInfo.style.display = "flex";
-  
-  })
-
-    
-  }
-shopdropDown()
-  
-
-
-function mobiledropDown(){
-  let navElem = document.querySelector("#mobile");
-  let DropList = document.querySelector(".mobile-content");
-  let eraHead = document.querySelector("#samsung-era-head");
-  let SamsungInfo = document.querySelector(".content");
-  navElem.addEventListener("mouseenter", function(){
-    DropList.style.display = "block";
-    DropList.style.marginLeft = "5vw"
-    eraHead.style.display = "none";
-    SamsungInfo.style.display = "none";
-  
-  })
-  navElem.addEventListener("mouseleave", function(){
-    DropList.style.display = "none";
-    eraHead.style.display = "block";
-    SamsungInfo.style.display = "flex";
-  
-  })
-    
-  }
-mobiledropDown()
-
-
-function laptopdropDown(){
-  let navElem = document.querySelector("#laptop");
-  let DropList = document.querySelector(".laptop-content");
-  let eraHead = document.querySelector("#samsung-era-head");
-  let SamsungInfo = document.querySelector(".content");
-  navElem.addEventListener("mouseenter", function(){
-    DropList.style.display = "block";
-    DropList.style.marginLeft = "10vw"
-    eraHead.style.display = "none";
-    SamsungInfo.style.display = "none";
-  
-  })
-  navElem.addEventListener("mouseleave", function(){
-    DropList.style.display = "none";
-    eraHead.style.display = "block";
-    SamsungInfo.style.display = "flex";
-  
-  })
-    
-  }
-laptopdropDown()
-
-function displaydropDown(){
-  let navElem = document.querySelector("#display");
-  let DropList = document.querySelector(".display-content");
-  let eraHead = document.querySelector("#samsung-era-head");
-  let SamsungInfo = document.querySelector(".content");
-  navElem.addEventListener("mouseenter", function(){
-    DropList.style.display = "block";
-    DropList.style.marginLeft = "15vw"
-    eraHead.style.display = "none";
-    SamsungInfo.style.display = "none";
-  
-  })
-  navElem.addEventListener("mouseleave", function(){
-    DropList.style.display = "none";
-    eraHead.style.display = "block";
-    SamsungInfo.style.display = "flex";
-  
-  })
-    
-  }
-displaydropDown()
-
-
-function accessoriesdropDown(){
-  let navElem = document.querySelector("#accessories");
-  let DropList = document.querySelector(".accessories-content");
-  let eraHead = document.querySelector("#samsung-era-head");
-  let SamsungInfo = document.querySelector(".content");
-  navElem.addEventListener("mouseenter", function(){
-    DropList.style.display = "block";
-    DropList.style.marginLeft = "20vw"
-    eraHead.style.display = "none";
-    SamsungInfo.style.display = "none";
-  
-  })
-  navElem.addEventListener("mouseleave", function(){
-    DropList.style.display = "none";
-    eraHead.style.display = "block";
-    SamsungInfo.style.display = "flex";
-  
-  })
-    
-  }
-  accessoriesdropDown()
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+// Above Function is contain all GSAP Effects
 function TextChangebespoke(){
    
   function changingInfobespoke() {
@@ -330,8 +210,7 @@ function TextChangebespoke(){
 }
 
 TextChangebespoke()
-
-
+// Above function is for the the changing text of BESPOKE AI
 
 
 function bespokeImgChange() {
@@ -383,9 +262,7 @@ function bespokeImgChange() {
 
 bespokeImgChange()
   
-
-
-
+// Above function is for the the changing Images of BESPOKE AI
 function TextChangeSamsung(){
    
     function changingInfoSamsung() {
@@ -437,5 +314,8 @@ function TextChangeSamsung(){
 }
 
 TextChangeSamsung();
+
+
+// Above function is for the the changing Text of the PAGE 1
 
 
